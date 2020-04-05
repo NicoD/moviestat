@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+    node_front_client:
+        container_name: moviestat_front
+        build: Docker/node
+        volumes:
+                - .:/app
+        working_dir: /app/client
+        network_mode: host
+        environment:
+          - PORT=3001
+    
+    node_front:
+        container_name: moviestat_front
+        build: Docker/node
+        volumes:
+                - .:/app
+        working_dir: /app
